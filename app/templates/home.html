@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recommandation System</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<style>
+		body{
+			background-color: white;
+		}
+		.titre{
+			padding-bottom: 3%;
+		}
+	</style>
+</head>
+<body>
+<div class="titre" style="background-color:lightgray">
+	<h2 class="display-2 text-center titreh2"> Recommandation Hotel </h2>
+	<h5 class="display-5 text-center"> For Tripadvisor users </h5><img src="https://img.favpng.com/21/19/13/tripadvisor-logo-hotel-png-favpng-cXF3PEP84mkb3LhrtUUhZYZpc.jpg"  height="60" style="border-radius:100%;margin-left: 48%;">
+</div>
+
+
+
+<form action="http://localhost:5000/test" method="post" style="margin-left:40%;margin-right:35%;margin-top:10%;background-color:orange;padding:50px">
+	<div class="form-group">
+		<label for="exampleReview">Username</label><br>
+		<input type="text" name="username" required="required" minlength="3">
+		<br><br><label >Password</label><br>
+		<input required="required" type="password">
+		<small id="reviewHelp" class="form-text text-muted">Please log in</small>
+	</div>
+	<button type="submit"  class="btn btn-primary" style="margin-left:10%;margin-top:3%;" value="Analyse">Log In</button>
+	<br>
+</form>
+
+
+<!--
+<h> {{name}} </h1>
+<table>
+<tr>
+{%for i in range(5)%}
+<td><table><tr> {{hotels[i]}}</tr><tr><img src="{{ img[i]}}" height="200" ></tr></table></td>
+
+{% endfor %}
+<tr>
+</table>
+-->
+<br>
+</body>
+</html>
